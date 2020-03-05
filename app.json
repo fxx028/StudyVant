@@ -1,0 +1,43 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/community/community"
+  ],
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "static/images/rucksack.png",
+        "selectedIconPath": "static/images/rucksack.png",
+        "text": "书架"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "static/images/teacher.png",
+        "selectedIconPath": "static/images/teacher.png",
+        "text": "社区"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "static/images/search.png",
+        "selectedIconPath": "static/images/search.png",
+        "text": "发现"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "van-button": "@vant/weapp/button",
+    "van-search": "@vant/weapp/search",
+    "van-card": "@vant/weapp/card",
+    "van-toast": "@vant/weapp/toast",
+    "van-grid": "@vant/weapp/grid",
+    "van-grid-item": "@vant/weapp/grid-item"
+  }
+}
