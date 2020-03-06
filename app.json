@@ -12,13 +12,13 @@
         "text": "书架"
       },
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/community/community",
         "iconPath": "static/images/teacher.png",
         "selectedIconPath": "static/images/teacher.png",
         "text": "社区"
       },
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/community/community",
         "iconPath": "static/images/search.png",
         "selectedIconPath": "static/images/search.png",
         "text": "发现"
