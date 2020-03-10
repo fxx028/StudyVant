@@ -1,4 +1,4 @@
-/* pages/community/community.wxss */
+/* pages/find/find.wxss */
 .con{
   margin-top: 32rpx;
 }

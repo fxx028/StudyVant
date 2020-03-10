@@ -1,33 +1,39 @@
-// pages/community/community.js
+// pages/find/ranking/ranking.js
+//获取应用实例
+const app = getApp()
+var Fly = require("../../../lib/wx") //wx.js为您下载的源码文件
+var fly = new Fly(); //创建fly实例
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    female:"",
+    male:"",
+    baseUrl: getApp().globalData.image_base_url
   },
 
-  check1: function(){
-    console.log("1")
+  onClickFemale:function(e){
+    console.log("index：" + e.target.id)
   },
-  check2: function () {
-    console.log("2")
+  onClickMale: function (e) {
+    console.log("index：" + e.target.id)
   },
-  check3: function () {
-    console.log("3")
-  },
-  check4: function () {
-    console.log("4")
-  },
-  check5: function () {
-    console.log("5")
-  },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    fly.get("http://api.zhuishushenqi.com/ranking/gender").then((d) => {
+      console.log(d.data)
+      this.setData({
+        female: d.data.female,
+        male: d.data.male
+      });
+    }).catch(err => {
+      console.log(err.status, err.message)
+    })
   },
 
   /**

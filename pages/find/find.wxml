@@ -1,0 +1,23 @@
+<!--pages/find/find.wxml-->
+<view class="con">
+ <view style="height:40px" class="lie" bindtap="check1">
+  <image src="../../static/images/paihang.png" style="width: 32px; height: 32px;" mode="aspectFit" class="img"></image>
+  <text class="txt">排行榜</text>
+ </view>
+
+ <view class="line"></view>
+
+
+ <view style="height:40px" class="lie" bindtap="check2">
+  <image src="../../static/images/zhuti.png" style="width: 32px; height: 32px;" mode="aspectFit" class="img"></image>
+  <text class="txt">主题书单</text>
+ </view>
+
+ <view class="line"></view>
+
+ <view style="height:40px" class="lie" bindtap="check3">
+  <image src="../../static/images/fenlei.png" style="width: 32px; height: 32px;" mode="aspectFit" class="img"></image>
+  <text class="txt">分类</text>
+ </view>
+
+</view>

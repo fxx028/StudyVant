@@ -1,0 +1,13 @@
+<!--pages/find/ranking/ranking.wxml-->
+<van-cell-group>
+  <van-cell title="男生榜" value="热血" />
+</van-cell-group>
+<van-grid column-num="3">
+  <van-grid-item id="{{index}}" bind:click="onClickFemale" icon="{{baseUrl+item.cover}}" text="{{item.title}}" wx:for="{{ female }}"/>
+</van-grid>
+<van-cell-group>
+  <van-cell title="女生榜" value="柔情" />
+</van-cell-group>
+<van-grid column-num="3">
+  <van-grid-item id="{{index}}" bind:click="onClickMale" icon="{{baseUrl+item.cover}}" text="{{item.title}}" wx:for="{{ male }}"/>
+</van-grid>

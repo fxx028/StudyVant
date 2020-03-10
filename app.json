@@ -1,7 +1,9 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/community/community"
+    "pages/community/community",
+    "pages/find/find",
+    "pages/find/ranking/ranking"
   ],
   "tabBar": {
     "list": [
@@ -18,7 +20,7 @@
         "text": "社区"
       },
       {
-        "pagePath": "pages/community/community",
+        "pagePath": "pages/find/find",
         "iconPath": "static/images/search.png",
         "selectedIconPath": "static/images/search.png",
         "text": "发现"
@@ -38,6 +40,8 @@
     "van-card": "@vant/weapp/card",
     "van-toast": "@vant/weapp/toast",
     "van-grid": "@vant/weapp/grid",
-    "van-grid-item": "@vant/weapp/grid-item"
+    "van-grid-item": "@vant/weapp/grid-item",
+    "van-cell": "@vant/weapp/cell",
+    "van-cell-group": "@vant/weapp/cell-group"
   }
 }

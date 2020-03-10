@@ -1,4 +1,4 @@
-// pages/community/community.js
+// pages/find/find.js
 Page({
 
   /**
@@ -7,21 +7,17 @@ Page({
   data: {
 
   },
-
-  check1: function(){
+  check1: function () {
     console.log("1")
+    wx.navigateTo({
+      url: 'ranking/ranking'
+    })
   },
   check2: function () {
     console.log("2")
   },
   check3: function () {
     console.log("3")
-  },
-  check4: function () {
-    console.log("4")
-  },
-  check5: function () {
-    console.log("5")
   },
   /**
    * 生命周期函数--监听页面加载

@@ -14,8 +14,8 @@ Page({
   clickSearch: function (event) {
     console.log("点击跳转到搜索页面页面")
   },
-  onClickBook: function() {
-    console.log("点击跳转到阅读页面")
+  onClickBook: function (index) {
+    console.log(index)
   },
   onLoad: function () {
     fly.get("http://api.zhuishushenqi.com/book/recommend?gender=male").then((d) => {

@@ -1,2 +1,41 @@
 <!--pages/community/community.wxml-->
-<text>pages/community/community.wxml</text>
+<view class="con">
+ <view style="height:40px" class="lie" bindtap="check1">
+  <image src="../../static/images/taolun.png" style="width: 32px; height: 32px;" mode="aspectFit" class="img"></image>
+  <text class="txt">综合讨论区</text>
+ </view>
+
+ <view class="line"></view>
+
+
+ <view style="height:40px" class="lie" bindtap="check2">
+  <image src="../../static/images/shuping.png" style="width: 32px; height: 32px;" mode="aspectFit" class="img"></image>
+  <text class="txt">书评区</text>
+ </view>
+
+ <view class="line"></view>
+
+ <view style="height:40px" class="lie" bindtap="check3">
+  <image src="../../static/images/huzhu.png" style="width: 32px; height: 32px;" mode="aspectFit" class="img"></image>
+  <text class="txt">书荒互助区</text>
+ </view>
+
+ <view class="line"></view>
+
+ <view style="height:40px" class="lie" bindtap="check4">
+  <image src="../../static/images/nvsheng.png" style="width: 32px; height: 32px;" mode="aspectFit" class="img"></image>
+  <text class="txt">女生区</text>
+ </view>
+
+ <view class="line"></view>
+
+ <view style="height:40px" class="lie" bindtap="check5">
+  <image src="../../static/images/yuanchuang.png" style="width: 32px; height: 32px;" mode="aspectFit"   class="img"></image>
+  <text class="txt">原创区</text>
+ </view>
+
+</view>
+
+ 
+
+ 
