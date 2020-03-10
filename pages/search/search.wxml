@@ -1,0 +1,16 @@
+<!--pages/search/search.wxml-->
+<view >
+<van-search
+  placeholder="请输入搜索关键词"
+  shape="round"
+  bind:search="onSearch"
+  value="{{ value }}"
+  focus="true"
+  bind:change="onChange"
+>
+</van-search>
+
+<view class="tagview">
+<van-tag bindtap="onClinckTag" color="{{colorLidt[index]}}" wx:for="{{hot_word.newHotWords}}" id="{{item.book}}" class="tag">{{item.word}}</van-tag>
+</view>
+</view>

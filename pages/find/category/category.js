@@ -1,32 +1,41 @@
-// pages/find/find.js
+// pages/find/category/category.js
+//获取应用实例
+const app = getApp()
+var Fly = require("../../../lib/wx") //wx.js为您下载的源码文件
+var fly = new Fly(); //创建fly实例
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    female: "",
+    male: "",
+    press: "",
+    baseUrl: getApp().globalData.image_base_url
+  },
 
+  onClickFemale: function (e) {
+    console.log("index：" + e.target.id)
   },
-  check1: function () {
-    console.log("1")
-    wx.navigateTo({
-      url: 'ranking/ranking'
-    })
+  onClickMale: function (e) {
+    console.log("index：" + e.target.id)
   },
-  check2: function () {
-    console.log("2")
-  },
-  check3: function () {
-    console.log("3")
-    wx.navigateTo({
-      url: 'category/category'
-    })
-  },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    fly.get("http://api.zhuishushenqi.com/cats/lv2/statistics").then((d) => {
+      console.log(d.data)
+      this.setData({
+        female: d.data.female,
+        male: d.data.male,
+        press: d.data.press
+      });
+    }).catch(err => {
+      console.log(err.status, err.message)
+    })
   },
 
   /**

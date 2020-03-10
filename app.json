@@ -1,9 +1,13 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/search/search",
     "pages/community/community",
     "pages/find/find",
-    "pages/find/ranking/ranking"
+    "pages/find/ranking/ranking",
+    "pages/find/subject/subject",
+    "pages/find/category/category",
+    "pages/search/searchlist/searchlist"
   ],
   "tabBar": {
     "list": [
@@ -42,6 +46,8 @@
     "van-grid": "@vant/weapp/grid",
     "van-grid-item": "@vant/weapp/grid-item",
     "van-cell": "@vant/weapp/cell",
-    "van-cell-group": "@vant/weapp/cell-group"
+    "van-cell-group": "@vant/weapp/cell-group",
+    "van-tag": "@vant/weapp/tag",
+    "van-toast": "@vant/weapp/toast"
   }
 }

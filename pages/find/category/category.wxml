@@ -1,0 +1,19 @@
+<!--pages/find/category/category.wxml-->
+<van-cell-group>
+  <van-cell title="男生"  />
+</van-cell-group>
+<van-grid column-num="3">
+  <van-grid-item id="{{index}}" bind:click="onClickFemale" icon="{{baseUrl+item.bookCover[0]}}" text="{{item.name}}" wx:for="{{ male }}"/>
+</van-grid>
+<van-cell-group>
+  <van-cell title="女生" />
+</van-cell-group>
+<van-grid column-num="3">
+  <van-grid-item id="{{index}}" bind:click="onClickMale" icon="{{baseUrl+item.bookCover[0]}}" text="{{item.name}}" wx:for="{{ female }}"/>
+</van-grid>
+<van-cell-group>
+  <van-cell title="杂志" />
+</van-cell-group>
+<van-grid column-num="3">
+  <van-grid-item id="{{index}}" icon="{{baseUrl+item.bookCover[0]}}" text="{{item.name}}" wx:for="{{ press }}"/>
+</van-grid>

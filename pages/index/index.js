@@ -13,9 +13,12 @@ Page({
   //事件处理函数
   clickSearch: function (event) {
     console.log("点击跳转到搜索页面页面")
+    wx.navigateTo({
+      url: '../search/search'
+    })
   },
-  onClickBook: function (index) {
-    console.log(index)
+  onClickBook: function (e) {
+    console.log(e.target.id)
   },
   onLoad: function () {
     fly.get("http://api.zhuishushenqi.com/book/recommend?gender=male").then((d) => {

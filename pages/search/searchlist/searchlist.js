@@ -1,4 +1,8 @@
-// pages/find/find.js
+// pages/search/searchlist/searchlist.js
+//获取应用实例
+const app = getApp()
+var Fly = require("../../../lib/wx") //wx.js为您下载的源码文件
+var fly = new Fly(); //创建fly实例
 Page({
 
   /**
@@ -7,26 +11,18 @@ Page({
   data: {
 
   },
-  check1: function () {
-    console.log("1")
-    wx.navigateTo({
-      url: 'ranking/ranking'
-    })
-  },
-  check2: function () {
-    console.log("2")
-  },
-  check3: function () {
-    console.log("3")
-    wx.navigateTo({
-      url: 'category/category'
-    })
-  },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    console.log(options)
+    fly.get("http://api.zhuishushenqi.com/book/fuzzy-search?query=" + options.keywords).then((d) => {
+      //输出请求数据
+      console.log(d.data)
+    }).catch(err => {
+      console.log(err.status, err.message)
+    })
   },
 
   /**

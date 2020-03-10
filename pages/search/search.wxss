@@ -1,0 +1,7 @@
+/* pages/search/search.wxss */
+.tagview{
+  margin: 16rpx;
+}
+.tag{
+  margin: 12rpx;
+}
