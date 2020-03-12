@@ -1,0 +1,7 @@
+/* pages/book/book.wxss */
+.book_opear{
+  height: 100rpx;
+  display: flex;
+  /*row 横向  column 列表  */
+  flex-direction: row;
+}

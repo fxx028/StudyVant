@@ -1,1 +1,62 @@
 /* pages/search/searchlist/searchlist.wxss */
+/* 礼品列表 */
+.giftListView {
+  width: 100%;
+  bottom: 0;
+  top: 5rpx;
+  /* background-color: red; */
+  position: absolute;
+
+}
+/* cell */
+.item {
+  width: 100%;
+  height: 156rpx;
+  position: relative;
+  /* background-color: green; */
+    border-bottom: 1px solid #f5f5f5;
+ 
+}
+/* cell 产品图 */
+.iconImageView {
+  width: 100rpx;
+  height: 100rpx;
+  top: 16rpx;
+  left: 36rpx;
+  /* background-color:orange; */
+  position: absolute;
+}
+.iconImage {
+  width: 100rpx;
+  height: 100rpx;
+}
+
+/* 产品名 */
+.productNameView {
+  top: 10rpx;
+  left: 160rpx;
+  right: 0rpx;
+  height: 20rpx;
+  position: absolute;
+}
+.productNameText {
+  color: rgb(32, 27, 27);
+  font-size: 18rpx;
+  white-space: nowrap;
+  text-overflow:ellipsis;
+}
+/* 剩余数 */
+.numView {
+  top: 70rpx;
+  height: 20rpx;
+  left: 160rpx;
+  right: 0rpx;
+  position:absolute;
+}
+.numText {
+  font-size: 12rpx;
+  color: rgb(230, 204, 140);
+   overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

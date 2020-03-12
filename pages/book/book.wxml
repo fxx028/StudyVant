@@ -1,0 +1,17 @@
+<!--pages/book/book.wxml-->
+  <view class="weui-cell weui-cell_example ">
+    <view class="weui-cell__hd">
+         <image src="http://statics.zhuishushenqi.com/agent/http%3A%2F%2Fimg.1391.com%2Fapi%2Fv1%2Fbookcenter%2Fcover%2F1%2F3354744%2F3354744_f8386e57293542efbc455a80381eb5a8.jpg%2F" style="margin-right: 16px;vertical-align: middle;width:36px; height: 48px;"></image>
+                </view>
+        <view class="book_info">
+        <view class="weui-cell__bd" style="font-size:14px;vertical-align: left;">标题文字</view>
+        <view class="weui-cell__ft" style="font-size:10px;text-align: left;">说明文字</view>
+        <view class="weui-cell__ft" style="font-size:10px;text-align: left;">时间</view>
+    </view>
+                
+  </view>
+
+  <view class="book_opear">
+   <view>	<a class="weui-btn weui-btn_primary" style="width:168px; height: 40px;margin-left: 10px">追更新</a></view>
+   <view>	<a class="weui-btn weui-btn_primary" style="width:168px; height: 40px;margin-left: 16px">开始阅读</a></view>
+	</view>   

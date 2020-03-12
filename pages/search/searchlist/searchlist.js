@@ -9,7 +9,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    searchdata:"",
+    baseUrl: getApp().globalData.image_base_url
   },
 
   /**
@@ -20,9 +21,16 @@ Page({
     fly.get("http://api.zhuishushenqi.com/book/fuzzy-search?query=" + options.keywords).then((d) => {
       //输出请求数据
       console.log(d.data)
+      this.setData({
+        searchdata: d.data
+      });
     }).catch(err => {
       console.log(err.status, err.message)
     })
+  },
+
+  dunHuanAction:function(e){
+    console.log(e.currentTarget.dataset.id);
   },
 
   /**

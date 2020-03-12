@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/book/book",
     "pages/index/index",
     "pages/search/search",
     "pages/community/community",
