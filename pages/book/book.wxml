@@ -1,12 +1,12 @@
 <!--pages/book/book.wxml-->
   <view class="weui-cell weui-cell_example ">
     <view class="weui-cell__hd">
-         <image src="http://statics.zhuishushenqi.com/agent/http%3A%2F%2Fimg.1391.com%2Fapi%2Fv1%2Fbookcenter%2Fcover%2F1%2F3354744%2F3354744_f8386e57293542efbc455a80381eb5a8.jpg%2F" style="margin-right: 16px;vertical-align: middle;width:36px; height: 48px;"></image>
+         <image src="{{baseUrl+book_details.cover}}" style="margin-right: 16px;vertical-align: middle;width:36px; height: 48px;"></image>
                 </view>
         <view class="book_info">
-        <view class="weui-cell__bd" style="font-size:14px;vertical-align: left;">标题文字</view>
-        <view class="weui-cell__ft" style="font-size:10px;text-align: left;">说明文字</view>
-        <view class="weui-cell__ft" style="font-size:10px;text-align: left;">时间</view>
+        <view class="weui-cell__bd" style="font-size:14px;vertical-align: left;">{{book_details.title}}</view>
+        <view class="weui-cell__ft" style="font-size:10px;text-align: left;">{{book_details.author}} | {{book_details.cat}} | {{book_details.wordCount}}字</view>
+        <view class="weui-cell__ft" style="font-size:10px;text-align: left;">{{book_details.updated}}</view>
     </view>
                 
   </view>
@@ -15,3 +15,65 @@
    <view>	<a class="weui-btn weui-btn_primary" style="width:168px; height: 40px;margin-left: 10px">追更新</a></view>
    <view>	<a class="weui-btn weui-btn_primary" style="width:168px; height: 40px;margin-left: 16px">开始阅读</a></view>
 	</view>   
+
+
+
+  <view class="book_status">
+
+      <view class="book_z">
+      <text>追书人数</text>
+      <text>{{book_details.latelyFollower}}</text>
+      </view>
+
+      <view class="book_l">
+      <text>读者留存率</text>
+      <text>{{book_details.retentionRatio}}%</text>
+      </view>
+
+      <view class="book_s">
+      <text>日更新字数</text>
+      <text>{{book_details.serializeWordCount}}</text>
+      </view>
+  
+  </view>
+
+
+ <view class="tagview">
+<van-tag bindtap="onClinckTag" color="{{colorLidt[index]}}" wx:for="{{book_details.tags}}" id="index" class="tag">{{item}}</van-tag>
+</view>
+
+<view class="line"></view>
+
+<view class="short_info"><text>{{book_details.longIntro}}</text> </view>
+
+<view class="line"></view>
+
+<view class="book_preview">
+ <text class="preview">热门书评</text>
+ <text class="more">更多</text>
+</view>
+
+
+<view class="preview_list" wx:for ="{{people_review.reviews}}">
+<view class="avatar">
+<image class="preview_avatar" src="{{baseUrl+item.author.avatar}}"></image>
+</view>
+<view class="preview_msg">
+<text class="nickname">{{item.author.nickname}}</text>
+<text class="title">{{item.title}}</text>
+<van-rate value="{{ value }}" disabled="true" disabled-color="#ffe1a1" size="16px"/>
+<text class="content">{{item.content}}</text>
+</view>
+</view>
+
+
+<view class="books_list" wx:for ="{{book_preview.booklists}}">
+<view class="book">
+<image class="books_cover" src="{{baseUrl+item.cover}}"></image>
+</view>
+<view class="books_msg">
+<text class="title">{{item.title}}</text>
+<text class="nickname">{{item.author}}</text>
+<text class="short">{{item.desc}}</text>
+</view>
+</view>
